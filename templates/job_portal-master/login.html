@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,17 +7,17 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  	<script type="text/javascript" src="jobs.js"></script>
-  	<link rel="stylesheet" href="styling.css">
+  	<script type="text/javascript" src="{%static 'jobs.js' %}"></script>
+  	<link rel="stylesheet" href="{%static 'styling.css' %}">
 </head>
 <body>
-	<img src="logo.png" id="logo">
+	<img src="{%static 'logo.png" id="logo">
 	
 	<div id="navbar">
 		<ul id="navigation" class="nav">
-			<li class="navli"><a href="contactus.html" >Contact Us</a></li>
-			<li class="navli"><a href="login.html">Login</a></li>
-			<li class="navli"><a href="home.html" >Home</a></li>
+			<li class="navli"><a href="{%static 'contactus.html' %}" >Contact Us</a></li>
+			<li class="navli"><a href="{%static 'login.html' %}">Login</a></li>
+			<li class="navli"><a href="{%static 'home.html' %}" >Home</a></li>
 		</ul>	
 	</div>
 	<div class="bkgimg" >
@@ -25,6 +26,12 @@
 			<h2 style="text-align: center; color: #002060">Login</h2><br>
 			
 			<form action="/action_page.php">
+				{% csrf_token %}
+
+				<input type="radio" id="type" name="Applicant" >
+				<label>Applicant</label><br>
+				<input type="radio" id="type" name="company">
+				<label>Company</label><br>
   				<div class="input-container">
     				<i class="fa fa-envelope icon"></i>
     				<input class="inputLogin" type="text" placeholder="Email" name="email">
