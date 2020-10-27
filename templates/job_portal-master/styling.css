@@ -1,0 +1,229 @@
+* {
+   	margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    font-family: "Courier-New";
+}
+
+/* Start of Common to All Pages */
+
+#logo{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	float: center;
+}
+
+#navbar{
+	overflow: hidden;
+}
+
+ul.nav {
+	list-style-type: none;
+	padding: 0;
+	position: relative;
+	background-color: #002060;
+}
+
+li.navli {
+	float: right;
+	width: 33.33%;
+}
+
+li.navli a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: larger;
+}
+
+li.navli a:hover{
+  background-color: black;
+  text-decoration: none;
+  color: white;
+}
+
+.sticky{
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: +1;
+}
+
+.sticky + .content{
+	margin-top: 350px;
+}
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+	width: 100%;
+   	margin: auto;
+
+}
+
+.bottom{
+	border: 1px solid #002060;
+	margin-top: 0px;
+}
+
+.bkgimg {
+
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	height: 500px;
+	background-image: url(bkimg.PNG);">
+}
+
+#copyright{
+	float: right;
+}
+
+/*End Of Common to All Pages */
+
+/* Start of Home Page*/
+#para1{
+	width: 65%;
+	float:left;
+	font-size: 1.5em;
+}
+
+#objective{
+	border: 3px #002060 solid;
+	background-color: white;
+	width: 35%;
+	float: right;
+	padding: 5px;
+	font-size: 1.4em;
+}
+
+#ob{
+	display: block;
+	float: left;
+	padding-left: 15px;
+}
+
+#jobreg{
+	float: left;
+	margin-left: 25%;
+	display: block;
+}
+
+#comreg{
+	margin-right: 25%;
+	float: right;
+	display: block;
+}
+
+.forjobimg + .forempimg{
+	width: 25%;
+}
+
+.templateimg{
+	width: auto;
+	height: 150px;
+	display: block;
+	margin: 0 auto;
+}
+
+.footer{
+	height: 220px;
+}
+.footer a{
+	background-color: #002060;
+	display: block;
+	width: auto;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: larger;
+	border-radius: 12px;
+}
+
+.footer a:hover{
+  background-color: black;
+  text-decoration: none;
+  color: white;
+}
+
+/*End of Home Page*/
+
+/*Start of Registration Pages*/
+
+.reg{
+	width: 50%;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: large;
+}
+
+input{
+	border: 1px solid #002060;
+	border-radius: 5px;
+	padding : 5px;
+	width: 100%;
+}
+
+input:focus {
+  border: 2px solid black;
+}
+
+label{
+	padding : 5px;
+	float: left;
+}
+
+.btn {
+  background-color: #002060;
+  font-size: large;
+  color: white;
+  padding: 10px 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+/*End of Registration Pages*/
+
+/*Login Page*/
+
+.login{
+	border: 1px solid black;
+	width: 40%;
+	padding: 10px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+* {box-sizing: border-box;}
+
+.input-container {
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.icon {
+  padding: 10px;
+  background: #002060;
+  color: white;
+  min-width: 50px;
+  text-align: center;
+}
+
+/*End of Login Page*/
+
+/*Contact Us Page*/
+.contact{
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 15px;
+	
+}

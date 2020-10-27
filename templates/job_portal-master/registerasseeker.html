@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>S-THR3E Jobs Portal</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  	<script type="text/javascript" src="jobs.js"></script>
+  	<link rel="stylesheet" href="styling.css">
+</head>
+<body >
+	<img src="logo.png" id="logo">
+	
+	<div id="navbar">
+		<ul id="navigation" class="nav">
+			<li class="navli"><a href="contactus.html" >Contact Us</a></li>
+			<li class="navli"><a href="login.html">Login</a></li>
+			<li class="navli"><a href="home.html" >Home</a></li>
+		</ul>	
+	</div>
+	
+	<div class="bkgimg" style="height: auto;">
+		<br>
+		<div class="reg" >
+			<h2 style="text-align: center;"><b>Employee Registration</b></h2>
+			<p>Please enter the following details:-</p>
+			<form method="POST">
+				{%csrf_token%}
+				<label for="jfname">First Name*</label>
+		  		<input type="text" id="jfname" name="jfname" required><br><br>
+		  		<label for="jlname">Last Name*</label>
+		  		<input type="text" id="jlname" name="jlname" required><br><br>
+		  		<label for="jcontactNumber">Contact Number*</label>
+		  		<input type="tel" id="jcontactNumber" name="jcontactNumber" pattern="[0-9]{10}" required><br><br>
+		  		<label for="jaadharnumber">AADHAR Number*</label>
+		  		<input type="tel" id="jaadharnumber" name="jaadharnumber" pattern="[0-9]{4} [0-9]{4} [0-9]{4}" required><br><br>
+		  		<label for="jaddress">Address*</label>
+		  		<input type="text" id="jcity" name="jcity" placeholder="City" required>
+		  		<input type="text" id="jstate" name="jstate" placeholder="State" required><br><br>
+		  		<label for="jemail">Email Id*</label><br>
+		  		<input type="email" id="email" name="email" required ><br><br>
+		  		<label for="jpassword">Password*</label>
+		  		<input type="password" id="password" name="password" required ><br><br>	  		
+		  		
+		  		<label >Qualifiactions*</label><br><br>
+			  	<label style="width: 50%;" for="tenth">Secondary Education</label>
+			  	<input style="width: 40%;" type="tel" id="tenth" name="tenth"><br><br><br>
+		  		<label style="width: 50%;" for="twelth">Higher Secondary Education</label>
+		  		<input style="width: 40%;" type="tel" id="twelth" name="twelth"><br><br><br>
+		  		
+		  		<input style="width: 10%; float: left;" type="checkbox" id="graduation1" name="graduation" onclick="grad()">
+		  		<label style="width: 50%; text-align: left;" for="graduation" >Graduation</label>
+		  		<input style="width: 40%; display: none;" type="tel" id="graduation" name="graduation" value=" "><br><br>
+		  		
+		  		<input style="width: 10%; float: left;" type="checkbox" id="postgraduation1" name="postgraduation" onclick="postgrad()">
+		  		<label style="width: 50%; text-align: left;" for="postgraduation">Post Graduation</label>
+		  		<input style="width: 40%; display: none;" type="tel" id="postgraduation" name="postgraduation" value=" "><br><br><br>
+	  			
+		  		<label>Are You a Fresher or Experienced?*</label><br><br>
+	  			<input style="width: 10%; float: left" type="radio" id="fresher" name="experience" value="fresher" onclick="exp()">
+	  			<label for="fresher">Fresher</label><br><br>
+	  			<input style="width: 10%; float: left" type="radio" id="experienced" name="experience" value="experienced" onchange="exp()">
+	  			<label for="experienced">Experienced</label><br><br>
+
+	  			<div id="exp1" style="display: none;">
+	  				<label style="float: left; width: 50%; " for="eprevcom">Previous Company</label>
+	  				<input style="width: 50%;" type="text" id="eprevcom" name="eprevcom" value=" "><br>
+	  				<br><label style="width: 50%;" for="eduratprevcom">Duration at Previous Company</label>
+	  				<input style="width: 50%;" type="num" id="eduratprevcom" name="eduratprevcom" value=" "><br>
+	  			</div>
+	  			
+	  			<button type="submit" class="btn">Login</button><br><br>
+			</form>
+		</div>
+	</div>
+	<hr class="bottom">
+  	<p id="copyright">&#169 Copyright 2020. All Rights Reserved</p>
+</body>
+</html>
